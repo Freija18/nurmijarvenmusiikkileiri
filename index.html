@@ -9,14 +9,13 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('ChatGPT Image 11. huhtik. 2025 klo 15.52.37.png'); /* Vaihda halutessasi */
+      background-image: url('ChatGPT Image 11. huhtik. 2025 klo 15.52.37.png'); /* Vaihda tiedostonimi tarvittaessa */
       background-size: cover;
       background-position: center;
       min-height: 100vh;
       color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
     }
 
@@ -24,10 +23,10 @@
       background-color: rgba(50, 50, 50, 0.6);
       padding: 2rem 3rem;
       border-radius: 16px;
-      max-width: 450px;
+      max-width: 600px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     h1 {
@@ -40,43 +39,10 @@
       line-height: 1.6;
     }
 
-    form {
-      background-color: rgba(50, 50, 50, 0.6);
-      padding: 2rem;
+    iframe {
+      margin: 3rem 0;
       border-radius: 16px;
-      margin: 2rem 0;
-      max-width: 450px;
-      width: 90%;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border: none;
-      border-radius: 8px;
-    }
-
-    button {
-      margin-top: 1.5rem;
-      padding: 0.7rem 1.5rem;
-      background-color: #ffffffcc;
-      color: black;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #ffffffee;
     }
   </style>
 </head>
@@ -86,20 +52,11 @@
     <p>Tervetuloa Nurmijärven musiikkileirin kotisivulle! Leiri kokoaa yhteen musiikista innostuneet lapset, nuoret ja aikuiset kesän kauneimpina päivinä.</p>
   </div>
 
-  <form>
-    <h2>Ilmoittautumislomake</h2>
-    <label for="nimi">Nimi</label>
-    <input type="text" id="nimi" name="nimi" required />
+  <!-- Ilmoittautumislomake -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHH5H03ESKxl_iJ4QgWlVOSFjZQeyh2EBVW9PEf2Q8TOj2Jg/viewform?embedded=true" width="640" height="716" frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
 
-    <label for="puhelin">Puhelinnumero</label>
-    <input type="tel" id="puhelin" name="puhelin" required />
-
-    <label for="sahkoposti">Sähköposti</label>
-    <input type="email" id="sahkoposti" name="sahkoposti" required />
-
-    <button type="submit">Lähetä</button>
-  </form>
 </body>
 </html>
+
 
 
