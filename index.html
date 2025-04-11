@@ -12,11 +12,12 @@
       background-image: url('ChatGPT Image 11. huhtik. 2025 klo 15.52.37.png'); /* Vaihda halutessasi */
       background-size: cover;
       background-position: center;
-      height: 100vh;
+      min-height: 100vh;
       color: white;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .overlay {
@@ -26,6 +27,7 @@
       max-width: 450px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      margin-bottom: 2rem;
     }
 
     h1 {
@@ -37,6 +39,35 @@
       font-size: 1.2rem;
       line-height: 1.6;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    input {
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #ffffff;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
   </style>
 </head>
 <body>
@@ -44,5 +75,10 @@
     <h1>Nurmijärven musiikkileiri</h1>
     <p>Tervetuloa Nurmijärven musiikkileirin kotisivulle! Leiri kokoaa yhteen musiikista innostuneet lapset, nuoret ja aikuiset kesän kauneimpina päivinä.</p>
   </div>
-</body>
-</html>
+
+  <div class="overlay">
+    <h2>Ilmoittaudu mukaan</h2>
+    <form>
+      <input type="text" name="nimi" placeholder="Osallistujan nimi" required />
+      <input type="tel
+
