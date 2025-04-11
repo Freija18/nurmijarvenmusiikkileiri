@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nurmijärven musiikkileiri</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -12,6 +16,7 @@
       background-image: url('ChatGPT Image 11. huhtik. 2025 klo 15.52.37.png'); /* Vaihda tiedostonimi tarvittaessa */
       background-size: cover;
       background-position: center;
+      background-attachment: fixed;
       min-height: 100vh;
       color: white;
       display: flex;
@@ -21,9 +26,10 @@
 
     .overlay {
       background-color: rgba(50, 50, 50, 0.6);
-      padding: 2rem 3rem;
+      padding: 2rem;
       border-radius: 16px;
-      max-width: 600px;
+      max-width: 90%;
+      width: 600px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       margin-top: 3rem;
@@ -39,10 +45,27 @@
       line-height: 1.6;
     }
 
-    iframe {
-      margin: 3rem 0;
+    .form-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+
+    .form-container iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -52,11 +75,12 @@
     <p>Tervetuloa Nurmijärven musiikkileirin kotisivulle! Leiri kokoaa yhteen musiikista innostuneet lapset, nuoret ja aikuiset kesän kauneimpina päivinä.</p>
   </div>
 
-  <!-- Ilmoittautumislomake -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHH5H03ESKxl_iJ4QgWlVOSFjZQeyh2EBVW9PEf2Q8TOj2Jg/viewform?embedded=true" width="640" height="716" frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
-
+  <div class="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHH5H03ESKxl_iJ4QgWlVOSFjZQeyh2EBVW9PEf2Q8TOj2Jg/viewform?embedded=true">Ladataan…</iframe>
+  </div>
 </body>
 </html>
+
 
 
 
