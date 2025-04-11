@@ -16,8 +16,8 @@
       color: white;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
     .overlay {
@@ -27,7 +27,7 @@
       max-width: 450px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     h1 {
@@ -41,32 +41,42 @@
     }
 
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      background-color: rgba(50, 50, 50, 0.6);
+      padding: 2rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    label {
+      display: block;
       margin-top: 1rem;
+      font-weight: bold;
     }
 
     input {
-      padding: 0.6rem;
-      border-radius: 8px;
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
       border: none;
-      font-size: 1rem;
+      border-radius: 8px;
     }
 
     button {
-      padding: 0.6rem;
-      border-radius: 8px;
-      border: none;
-      background-color: #ffffff;
-      color: #333;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #ffffffcc;
+      color: black;
       font-weight: bold;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #ddd;
+      background-color: #ffffffee;
     }
   </style>
 </head>
@@ -76,9 +86,20 @@
     <p>Tervetuloa Nurmijärven musiikkileirin kotisivulle! Leiri kokoaa yhteen musiikista innostuneet lapset, nuoret ja aikuiset kesän kauneimpina päivinä.</p>
   </div>
 
-  <div class="overlay">
-    <h2>Ilmoittaudu mukaan</h2>
-    <form>
-      <input type="text" name="nimi" placeholder="Osallistujan nimi" required />
-      <input type="tel
+  <form>
+    <h2>Ilmoittautumislomake</h2>
+    <label for="nimi">Nimi</label>
+    <input type="text" id="nimi" name="nimi" required />
+
+    <label for="puhelin">Puhelinnumero</label>
+    <input type="tel" id="puhelin" name="puhelin" required />
+
+    <label for="sahkoposti">Sähköposti</label>
+    <input type="email" id="sahkoposti" name="sahkoposti" required />
+
+    <button type="submit">Lähetä</button>
+  </form>
+</body>
+</html>
+
 
