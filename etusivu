@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurmijärven musiikkileiri</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1522170218858-187fdf7c30c1'); /* Vaihda halutessasi */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      background-color: rgba(50, 50, 50, 0.6);
+      padding: 2rem 3rem;
+      border-radius: 16px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Nurmijärven musiikkileiri</h1>
+    <p>Tervetuloa Nurmijärven musiikkileirin kotisivulle! Leiri kokoaa yhteen musiikista innostuneet lapset, nuoret ja aikuiset kesän kauneimpina päivinä.</p>
+  </div>
+</body>
+</html>
