@@ -13,125 +13,141 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('ChatGPT Image 11. huhtik. 2025 klo 15.52.37.png'); /* Vaihda tiedostonimi tarvittaessa */
+      background-image: url('ChatGPT Image 11. huhtik. 2025 klo 15.52.37.png');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       min-height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      color: #fff;
     }
 
-    .overlay {
-      background-color: rgba(50, 50, 50, 0.6);
-      padding: 2rem;
-      border-radius: 16px;
-      max-width: 90%;
-      width: 800px;
-      text-align: center;
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem 3rem;
+      border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      margin-top: 3rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
 
-    p {
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      color: #ffcc00;
+    }
+
+    p, li {
       font-size: 1.1rem;
       line-height: 1.6;
-      margin: 0.5rem 0;
     }
 
-    .form-container {
-      width: 90%;
-      max-width: 800px;
-      margin: 3rem auto;
+    ul {
+      list-style: none;
+      padding: 0;
     }
 
-    .form-container iframe {
-      width: 100%;
-      height: 800px;
+    ul li::before {
+      content: "🎶 ";
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .signup-btn {
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      padding: 1rem 2.5rem;
+      font-size: 1.3rem;
       border: none;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .signup-btn:hover {
+      transform: scale(1.05);
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
+      .container {
+        padding: 1.5rem;
       }
-      p {
-        font-size: 1rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .signup-btn {
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <div class="container">
     <h1>Nurmijärven musiikkileiri</h1>
 
-    <p><strong>Soittimina:</strong></p>
-    <ul style="list-style: none; padding-left: 0;">
-      <li>🎻 Viulu ja alttoviulu</li>
-      <li>🎹 Piano</li>
-      <li>🎸 Klassinen kitara</li>
-      <li>🎸 Sähkökitara</li>
-      <li>🎸 Bassokitara</li>
-      <li>🥁 Rumpusetti</li>
-      <li>🎹 Kosketinsoittimet</li>
-      <li>🎤 Poplaulu</li>
+    <h2>Soittimina:</h2>
+    <ul>
+      <li>Viulu ja alttoviulu</li>
+      <li>Piano</li>
+      <li>Klassinen kitara</li>
+      <li>Sähkökitara</li>
+      <li>Bassokitara</li>
+      <li>Rumpusetti</li>
+      <li>Kosketinsoittimet</li>
+      <li>Poplaulu</li>
     </ul>
 
+    <h2>Leirin tiedot:</h2>
     <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
     <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
     <p><strong>Paikka:</strong> Sääksin leirikeskus, Sääksjärventie 144, 05200 Rajamäki</p>
+    <p>Leirillä on täysihoito, oma soittotunti, yhtyesoittoa, kuoro ja muuta kivaa ohjelmaa.<br>
+       Nuoriso-ohjaaja ja isoset järjestävät vapaa-ajan toimintaa joka päivä. Halutessasi voit osallistua päiväleiriläisenä ja yöpyä kotona.</p>
+    <p><strong>Hinta:</strong> 250 € / hlö. Sisarusalennus 50 €.</p>
+    <p>Leirillä voi aloittaa soittimen opiskelun sekä kokeilla eri soittimia. Mahdollisuus suorittaa asteikko- ja tasosuorituksia.</p>
 
-    <p>Leirillä on täysihoito, oma soittotunti ja yhtyesoittoa, kuoro sekä muuta kivaa ohjelmaa.<br>
-    Nuoriso-ohjaaja ja isoset järjestävät vapaa-ajan toimintaa joka päivä. Halutessasi voit osallistua päiväleiriläisenä ja yöpyä kotona.</p>
-
-    <p><strong>Hinta:</strong> 250 euroa/hlö, sisarusalennus 50 euroa.</p>
-
-    <p>Leirillä voi aloittaa soittimen opiskelun sekä kokeilla eri soittimia. Leirillä on mahdollisuus suorittaa asteikko- ja tasosuorituksia.</p>
-
-    <p><strong>Opettajat:</strong><br>
-    Eva Dano ja Lea Lindholm – piano<br>
-    Raili Poijärvi ja Ida Hoefft – viulu, alttoviulu ja yhtyesoitto<br>
-    Eelis Lähdemäki – kitara<br>
-    Leo Salmela (Sibelius-Akatemian vt. bändisoiton lehtori) – sähkökitara, sähköbasso, koskettimet, rumpusetti ja laulu<br>
-    Bändisoittoa ja biisintekoa<br>
-    (Taiteilijanimellä Leon Nightingale voit kuunnella Leon biisejä Spotifyssa tai YouTubessa)</p>
+    <h2>Opettajat:</h2>
+    <p>
+      Eva Dano ja Lea Lindholm – piano<br>
+      Raili Poijärvi ja Ida Hoefft – viulu, alttoviulu ja yhtyesoitto<br>
+      Eelis Lähdemäki – kitara<br>
+      Leo Salmela (Sibelius-Akatemian vt. bändisoiton lehtori) – sähkökitara, basso, koskettimet, rumpusetti ja laulu<br>
+      (Taiteilijanimellä Leon Nightingale voit kuunnella hänen biisejään Spotifyssa tai YouTubessa)
+    </p>
 
     <p><strong>Ilmoittautumiset ja tiedustelut</strong> 15.5.2025 mennessä:<br>
-    Viulunsoiton lehtori Raili Poijärvi, puh. 044 016 2503</p>
+      Viulunsoiton lehtori Raili Poijärvi – puh. 044 016 2503
+    </p>
 
     <p><em>Erään oppilaan palaute:</em><br>
-    "Leirillä oli viime kesänä todella kivaa, haluamme ehdottomasti taas ensi kesänä osallistua!"</p>
-  </div>
+      "Leirillä oli viime kesänä todella kivaa, haluamme ehdottomasti taas ensi kesänä osallistua!"
+    </p>
 
-    <div class="form-container" style="text-align: center;">
-    <a href="https://numo.eepos.fi/#/splash" target="_blank" style="
-      display: inline-block;
-      background-color: #ffcc00;
-      color: #000;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      👉 Ilmoittaudu leirille tästä
-    </a>
+    <div class="btn-container">
+      <a href="https://numo.eepos.fi/#/splash" target="_blank" class="signup-btn">👉 Ilmoittaudu leirille tästä</a>
+    </div>
   </div>
-    
 </body>
 </html>
+
 
 
 
