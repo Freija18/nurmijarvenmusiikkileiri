@@ -22,6 +22,30 @@
       text-align: center;
     }
 
+    .navbar {
+      background-color: rgba(100, 100, 100, 0.5);
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
     .container {
       background-color: rgba(0, 0, 0, 0.6);
       max-width: 900px;
@@ -122,10 +146,24 @@
         justify-content: center;
         margin-left: 0;
       }
+
+      .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigointipalkki -->
+  <nav class="navbar">
+    <a href="etusivu.html">Etusivu</a>
+    <a href="opettajat.html">Opettajat</a>
+    <a href="info.html">Leirin tiedot</a>
+    <a href="yhteystiedot.html">Yhteystiedot</a>
+  </nav>
+
   <div class="container">
     <h1>Nurmijärven musiikkileiri</h1>
 
@@ -177,6 +215,7 @@
   </div>
 </body>
 </html>
+
 
 
 
