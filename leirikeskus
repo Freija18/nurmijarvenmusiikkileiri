@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sääksin leirikeskus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url(sääksin keskus.jpeg); /* Lisää GitHubiin tämä kuva tai muuta nimi */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: rgba(100, 100, 100, 0.5);
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1.5rem;
+      color: #ffcc00;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="etusivu.html">Etusivu</a>
+    <a href="opettajat.html">Opettajat</a>
+    <a href="info.html">Leirin tiedot</a>
+    <a href="yhteystiedot.html">Yhteystiedot</a>
+  </nav>
+
+  <div class="container">
+    <h1>Sääksin leirikeskus</h1>
+    <p>
+      Sääksin leirikeskus sijaitsee kauniilla paikalla Sääksjärven rannalla, Rajamäellä.<br>
+      Alueella on majoitustiloja, ruokasali, luokkahuoneita opetukseen, sekä runsaasti ulkotilaa peleihin ja leikkeihin.<br><br>
+      Ranta-alue soveltuu uimiseen ja vesileikkeihin, ja lisäksi leirikeskuksessa on nuotiopaikka, urheilukenttä ja muuta vapaa-ajan tekemistä.<br>
+      Leirin aikana ruokailut järjestetään leirikeskuksen omassa keittiössä täysihoitona.<br><br>
+      Osoite: <strong>Sääksjärventie 144, 05200 Rajamäki</strong>
+    </p>
+  </div>
+
+</body>
+</html>
