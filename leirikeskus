@@ -85,7 +85,7 @@
 <body>
 
   <nav class="navbar">
-    <a href="etusivu.html">Etusivu</a>
+    <a href="index.html">Etusivu</a>
     <a href="opettajat.html">Opettajat</a>
     <a href="leirikeskus">Sääksin leirikeskus</a>
     <a href="yhteystiedot.html">Yhteystiedot</a>
