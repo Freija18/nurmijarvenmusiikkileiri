@@ -87,6 +87,22 @@
       transform: scale(1.05);
     }
 
+    .logo-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      max-height: 100px;
+      max-width: 200px;
+      height: auto;
+      width: auto;
+    }
+
     @media (max-width: 600px) {
       .container {
         padding: 1.5rem;
@@ -146,7 +162,14 @@
     <div class="btn-container">
       <a href="https://numo.eepos.fi/#/splash" target="_blank" class="signup-btn">Ilmoittaudu leirille tästä</a>
     </div>
+
+    <!-- Logot -->
+    <div class="logo-section">
+      <img src="Numo_logo.png" alt="Logo 1" class="logo" />
+      <img src="Nurmijärven_seurakunta_logo.png" alt="Logo 2" class="logo" />
+    </div>
   </div>
 </body>
 </html>
+
 
