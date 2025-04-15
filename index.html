@@ -50,7 +50,7 @@
 
     .container {
       background-color: rgba(0, 0, 0, 0.6);
-      max-width: 900px;
+      max-width: 1200px;
       margin: 3rem auto;
       padding: 2rem 3rem;
       border-radius: 20px;
@@ -66,12 +66,13 @@
     h2 {
       margin-top: 2rem;
       font-size: 1.6rem;
-      color: #ffcc00;
+      color: #333;
     }
 
     p, li {
       font-size: 1.1rem;
       line-height: 1.6;
+      color: #000;
     }
 
     ul {
@@ -92,7 +93,7 @@
     }
 
     .btn-container {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .signup-btn {
@@ -131,7 +132,33 @@
       width: auto;
     }
 
-    @media (max-width: 600px) {
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .column-box {
+      background-color: rgba(200, 200, 200, 0.85);
+      color: #000;
+      flex: 1;
+      min-width: 250px;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .column-box h2 {
+      color: #333;
+    }
+
+    @media (max-width: 800px) {
+      .columns {
+        flex-direction: column;
+      }
+
       .container {
         padding: 1.5rem;
       }
@@ -171,33 +198,42 @@
   <div class="container">
     <h1>Nurmijärven musiikkileiri</h1>
 
-    <h2>Leirin tiedot:</h2>
-    <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
-    <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
-    <p><strong>Paikka:</strong> Sääksin leirikeskus, Sääksjärventie 144, 05200 Rajamäki</p>
-    <p>Leirillä on täysihoito, oma soittotunti, yhtyesoittoa, kuoro ja muuta kivaa ohjelmaa.<br>
-       Nuoriso-ohjaaja ja isoset järjestävät vapaa-ajan toimintaa joka päivä. Halutessasi voit osallistua päiväleiriläisenä ja yöpyä kotona.</p>
-    <p><strong>Hinta:</strong> 250 € / hlö. Sisarusalennus 50 €.</p>
-    <p>Leirillä voi aloittaa soittimen opiskelun sekä kokeilla eri soittimia. Mahdollisuus suorittaa asteikko- ja tasosuorituksia.</p>
+    <div class="columns">
+      <!-- Leirin tiedot -->
+      <div class="column-box">
+        <h2>Leirin tiedot</h2>
+        <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
+        <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
+        <p><strong>Paikka:</strong> Sääksin leirikeskus, Sääksjärventie 144, 05200 Rajamäki</p>
+        <p>Leirillä on täysihoito, oma soittotunti, yhtyesoittoa, kuoro ja muuta kivaa ohjelmaa.<br>
+          Nuoriso-ohjaaja ja isoset järjestävät vapaa-ajan toimintaa joka päivä. Halutessasi voit osallistua päiväleiriläisenä ja yöpyä kotona.</p>
+        <p><strong>Hinta:</strong> 250 € / hlö. Sisarusalennus 50 €.</p>
+        <p>Leirillä voi aloittaa soittimen opiskelun sekä kokeilla eri soittimia. Mahdollisuus suorittaa asteikko- ja tasosuorituksia.</p>
+      </div>
 
-    <h2>Opettajat:</h2>
-    <p>
-      Eva Dano ja Lea Lindholm – piano<br>
-      Raili Poijärvi ja Ida Hoefft – viulu, alttoviulu ja yhtyesoitto<br>
-      Leo Salmela – sähkökitara, basso, koskettimet, rummut ja laulu<br>
-    </p>
+      <!-- Opettajat -->
+      <div class="column-box">
+        <h2>Opettajat</h2>
+        <p>
+          Eva Dano ja Lea Lindholm – piano<br>
+          Raili Poijärvi ja Ida Hoefft – viulu, alttoviulu ja yhtyesoitto<br>
+          Leo Salmela – sähkökitara, basso, koskettimet, rummut ja laulu
+        </p>
+      </div>
 
-    <h2>Lisätiedot:</h2>
-    <p>
-      Viulunsoiton lehtori Raili Poijärvi – puh. 044 016 2503
-    </p>
-
-    <p><em>Erään oppilaan palaute:</em><br>
-      "Leirillä oli viime kesänä todella kivaa, haluamme ehdottomasti taas ensi kesänä osallistua!"
-    </p>
-
-    <div class="btn-container">
-      <a href="https://numo.eepos.fi/#/splash" target="_blank" class="signup-btn">Ilmoittaudu leirille tästä</a>
+      <!-- Lisätiedot -->
+      <div class="column-box">
+        <h2>Lisätiedot</h2>
+        <p>
+          Viulunsoiton lehtori Raili Poijärvi – puh. 044 016 2503
+        </p>
+        <p><em>Erään oppilaan palaute:</em><br>
+          "Leirillä oli viime kesänä todella kivaa, haluamme ehdottomasti taas ensi kesänä osallistua!"
+        </p>
+        <div class="btn-container">
+          <a href="https://numo.eepos.fi/#/splash" target="_blank" class="signup-btn">Ilmoittaudu leirille tästä</a>
+        </div>
+      </div>
     </div>
 
     <!-- Logot -->
@@ -208,9 +244,4 @@
   </div>
 </body>
 </html>
-
-
-
-
-
 
