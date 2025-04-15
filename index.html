@@ -49,30 +49,35 @@
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      max-width: 1200px;
+      max-width: 900px;
       margin: 3rem auto;
-      padding: 2rem 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .section-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem 2rem;
+      margin-bottom: 2rem;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       color: #ffffff;
     }
 
     h2 {
-      margin-top: 2rem;
       font-size: 1.6rem;
-      color: #333;
+      margin-bottom: 1rem;
+      color: #ffcc00;
     }
 
     p, li {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #000;
+      color: #fff;
     }
 
     ul {
@@ -117,12 +122,11 @@
 
     .logo-section {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       gap: 2rem;
-      margin: 3rem 0;
+      margin-top: 3rem;
       flex-wrap: wrap;
-      margin-left: 230px;
     }
 
     .logo {
@@ -132,37 +136,7 @@
       width: auto;
     }
 
-    .columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .column-box {
-      background-color: rgba(200, 200, 200, 0.85);
-      color: #000;
-      flex: 1;
-      min-width: 250px;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-
-    .column-box h2 {
-      color: #333;
-    }
-
-    @media (max-width: 800px) {
-      .columns {
-        flex-direction: column;
-      }
-
-      .container {
-        padding: 1.5rem;
-      }
-
+    @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
       }
@@ -170,11 +144,6 @@
       .signup-btn {
         font-size: 1.1rem;
         padding: 1rem 1.5rem;
-      }
-
-      .logo-section {
-        justify-content: center;
-        margin-left: 0;
       }
 
       .navbar {
@@ -198,41 +167,37 @@
   <div class="container">
     <h1>Nurmijärven musiikkileiri</h1>
 
-    <div class="columns">
-      <!-- Leirin tiedot -->
-      <div class="column-box">
-        <h2>Leirin tiedot</h2>
-        <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
-        <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
-        <p><strong>Paikka:</strong> Sääksin leirikeskus, Sääksjärventie 144, 05200 Rajamäki</p>
-        <p>Leirillä on täysihoito, oma soittotunti, yhtyesoittoa, kuoro ja muuta kivaa ohjelmaa.<br>
-          Nuoriso-ohjaaja ja isoset järjestävät vapaa-ajan toimintaa joka päivä. Halutessasi voit osallistua päiväleiriläisenä ja yöpyä kotona.</p>
-        <p><strong>Hinta:</strong> 250 € / hlö. Sisarusalennus 50 €.</p>
-        <p>Leirillä voi aloittaa soittimen opiskelun sekä kokeilla eri soittimia. Mahdollisuus suorittaa asteikko- ja tasosuorituksia.</p>
-      </div>
+    <!-- Leirin tiedot -->
+    <div class="section-box">
+      <h2>Leirin tiedot</h2>
+      <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
+      <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
+      <p><strong>Paikka:</strong> Sääksin leirikeskus, Sääksjärventie 144, 05200 Rajamäki</p>
+      <p>Leirillä on täysihoito, oma soittotunti, yhtyesoittoa, kuoro ja muuta kivaa ohjelmaa.<br>
+         Nuoriso-ohjaaja ja isoset järjestävät vapaa-ajan toimintaa joka päivä. Halutessasi voit osallistua päiväleiriläisenä ja yöpyä kotona.</p>
+      <p><strong>Hinta:</strong> 250 € / hlö. Sisarusalennus 50 €.</p>
+      <p>Leirillä voi aloittaa soittimen opiskelun sekä kokeilla eri soittimia. Mahdollisuus suorittaa asteikko- ja tasosuorituksia.</p>
+    </div>
 
-      <!-- Opettajat -->
-      <div class="column-box">
-        <h2>Opettajat</h2>
-        <p>
-          Eva Dano ja Lea Lindholm – piano<br>
-          Raili Poijärvi ja Ida Hoefft – viulu, alttoviulu ja yhtyesoitto<br>
-          Leo Salmela – sähkökitara, basso, koskettimet, rummut ja laulu
-        </p>
-      </div>
+    <!-- Opettajat -->
+    <div class="section-box">
+      <h2>Opettajat</h2>
+      <p>
+        Eva Dano ja Lea Lindholm – piano<br>
+        Raili Poijärvi ja Ida Hoefft – viulu, alttoviulu ja yhtyesoitto<br>
+        Leo Salmela – sähkökitara, basso, koskettimet, rummut ja laulu
+      </p>
+    </div>
 
-      <!-- Lisätiedot -->
-      <div class="column-box">
-        <h2>Lisätiedot</h2>
-        <p>
-          Viulunsoiton lehtori Raili Poijärvi – puh. 044 016 2503
-        </p>
-        <p><em>Erään oppilaan palaute:</em><br>
-          "Leirillä oli viime kesänä todella kivaa, haluamme ehdottomasti taas ensi kesänä osallistua!"
-        </p>
-        <div class="btn-container">
-          <a href="https://numo.eepos.fi/#/splash" target="_blank" class="signup-btn">Ilmoittaudu leirille tästä</a>
-        </div>
+    <!-- Lisätiedot -->
+    <div class="section-box">
+      <h2>Lisätiedot</h2>
+      <p>Viulunsoiton lehtori Raili Poijärvi – puh. 044 016 2503</p>
+      <p><em>Erään oppilaan palaute:</em><br>
+        "Leirillä oli viime kesänä todella kivaa, haluamme ehdottomasti taas ensi kesänä osallistua!"
+      </p>
+      <div class="btn-container">
+        <a href="https://numo.eepos.fi/#/splash" target="_blank" class="signup-btn">Ilmoittaudu leirille tästä</a>
       </div>
     </div>
 
@@ -244,4 +209,5 @@
   </div>
 </body>
 </html>
+
 
