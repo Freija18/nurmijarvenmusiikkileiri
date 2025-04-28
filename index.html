@@ -63,6 +63,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       opacity: 0;
       transform: translateY(20px);
+      position: relative;
       transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
@@ -177,7 +178,7 @@
     <h1>Nurmijärven musiikkileiri</h1>
 
     <!-- Leirin tiedot -->
-    <div class="section-box">
+    <div class="section-box visible">
       <h2>Leirin tiedot</h2>
       <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
       <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
@@ -218,7 +219,7 @@
   </div>
 
   <script>
-    // Lisätään luokka "visible" jokaista .section-box elementtiä varten, kun ne tulevat näkyviin ruudulle
+    // Lisää luokka 'visible' ensimmäiselle osalle ja siirrä muiden näkyvyys vierityksen mukaan.
     const sections = document.querySelectorAll('.section-box');
 
     const isElementInViewport = (el) => {
@@ -232,19 +233,22 @@
     };
 
     const handleScroll = () => {
-      sections.forEach((section) => {
+      sections.forEach((section, index) => {
         if (isElementInViewport(section)) {
           section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
         }
       });
     };
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('load', handleScroll); // Lisätään efektit myös sivun latauksen yhteydessä
+    window.addEventListener('load', handleScroll); // Lisää ensimmäinen osio heti näkyviin
   </script>
 
 </body>
 </html>
+
 
 
 
