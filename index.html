@@ -153,6 +153,9 @@
       }
     }
   </style>
+  .section-box {
+  transition: opacity 0.5s ease;
+}
 </head>
 <body>
 
@@ -208,6 +211,34 @@
       <img src="Nurmijärven_seurakunta_logo.png" alt="Logo 2" class="logo" />
     </div>
   </div>
+
+  <script>
+  const sections = document.querySelectorAll('.section-box');
+
+  let currentSection = 0;
+  sections.forEach((section, index) => {
+    if (index !== 0) section.style.display = 'none'; // Alussa vain eka näkyy
+  });
+
+  window.addEventListener('wheel', (event) => {
+    if (event.deltaY > 0) {
+      // Scroll DOWN
+      if (currentSection < sections.length - 1) {
+        sections[currentSection].style.display = 'none';
+        currentSection++;
+        sections[currentSection].style.display = 'block';
+      }
+    } else {
+      // Scroll UP
+      if (currentSection > 0) {
+        sections[currentSection].style.display = 'none';
+        currentSection--;
+        sections[currentSection].style.display = 'block';
+      }
+    }
+  });
+</script>
+  
 </body>
 </html>
 
