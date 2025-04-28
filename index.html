@@ -24,29 +24,30 @@
       text-align: center;
     }
 
-    .navbar {
-      background-color: rgba(100, 100, 100, 0.5);
-      padding: 1rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-    }
+.navbar {
+  background-color: rgba(100, 100, 100, 0.5);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Varmistaa pystysuoran keskityksen */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
 
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  margin: 0 1rem; /* Lisätään väliä linkkien väliin */
+}
 
-    .navbar a:hover {
-      color: #ffcc00;
-    }
+.navbar a:hover {
+  color: #ffcc00;
+}
 
     .container {
       max-width: 900px;
