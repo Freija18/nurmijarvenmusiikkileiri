@@ -260,12 +260,21 @@
         }
       });
 
+      // Poistetaan ensimmäinen osio (Leirin tiedot) skrollatessa
+      const section1 = document.getElementById("section1");
+      if (currentScroll > section1.offsetTop + 100) {
+        section1.classList.add("hide");
+      } else {
+        section1.classList.remove("hide");
+      }
+
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
     });
   </script>
 
 </body>
 </html>
+
 
 
 
