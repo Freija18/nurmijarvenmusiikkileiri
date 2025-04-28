@@ -33,7 +33,7 @@
       font-size: 2.5rem;
       color: white;
       padding: 10px;
-      transition: opacity 0.3s ease-in-out; /* Lisää sulava animaatio */
+      transition: opacity 0.3s ease-in-out;
     }
 
     .hide {
@@ -77,12 +77,8 @@
       margin-bottom: 2rem;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      opacity: 1;
+      opacity: 0; /* Piilotetaan osiot alkuun */
       transition: opacity 0.5s ease-in-out;
-    }
-
-    .section-box.hide {
-      opacity: 0; /* Piilottaa osiot */
     }
 
     h1 {
@@ -239,7 +235,7 @@
   <script>
     let lastScrollTop = 0;
     const stickyText = document.getElementById("stickyText");
-    const sections = document.querySelectorAll(".section-box");
+    const section1 = document.getElementById("section1");
 
     window.addEventListener("scroll", function() {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -252,20 +248,10 @@
       }
 
       // Piilotetaan ja näytetään osiot skrollauksen mukaan
-      sections.forEach(section => {
-        if (window.scrollY + window.innerHeight > section.offsetTop + 100) {
-          section.classList.remove("hide");
-        } else {
-          section.classList.add("hide");
-        }
-      });
-
-      // Poistetaan ensimmäinen osio (Leirin tiedot) skrollatessa
-      const section1 = document.getElementById("section1");
-      if (currentScroll > section1.offsetTop + 100) {
-        section1.classList.add("hide");
+      if (window.scrollY > section1.offsetTop) {
+        section1.style.opacity = 1; // Näytetään osio, kun skrollataan alaspäin
       } else {
-        section1.classList.remove("hide");
+        section1.style.opacity = 0; // Piilotetaan osio, kun skrollataan ylöspäin
       }
 
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
@@ -274,6 +260,8 @@
 
 </body>
 </html>
+
+
 
 
 
