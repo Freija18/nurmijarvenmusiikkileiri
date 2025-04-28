@@ -25,12 +25,28 @@
       text-align: center;
     }
 
+    /* Sticky title style */
+    .sticky-title {
+      position: sticky;
+      top: 0;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5); /* Taustaväri, joka varmistaa, että teksti on luettavissa */
+      padding: 10px;
+      transition: opacity 0.3s ease-in-out; /* Lisää sulava animaatio */
+    }
+
+    .hide {
+      opacity: 0; /* Piilottaa tekstin */
+    }
+
     .navbar {
       background-color: rgba(100, 100, 100, 0.5);
       padding: 1rem 0;
       display: flex;
       justify-content: center;
-      align-items: center; /* Varmistaa pystysuoran keskityksen */
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -43,7 +59,7 @@
       font-weight: bold;
       font-size: 1.1rem;
       transition: color 0.3s;
-      margin: 0 1rem; /* Lisätään väliä linkkien väliin */
+      margin: 0 1rem;
     }
 
     .navbar a:hover {
@@ -62,29 +78,12 @@
       margin-bottom: 2rem;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      opacity: 0;
-      transform: translateY(20px);
-      position: relative;
-      transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-
-    .section-box.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     h1 {
       font-size: 3rem;
       margin-bottom: 2rem;
       color: #ffffff;
-    }
-
-    .subheading {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3rem; /* Suurempi fonttikoko */
-      margin-top: 1rem;
-      color: #fff; /* Tekstin väri valkoinen */
-      font-weight: bold;
     }
 
     h2 {
@@ -185,14 +184,14 @@
 
   <div class="container">
     <h1>Nurmijärven musiikkileiri</h1>
-
-    <!-- Lisätty kaunis teksti -->
-    <div class="subheading">
+    
+    <!-- Tämä on se teksti, joka tulee näkyviin ja piiloutuu skrollaamisen mukaan -->
+    <div class="sticky-title" id="stickyText">
       Musiikkia, hyvää ruokaa ja hauskaa yhdessäoloa!
     </div>
 
     <!-- Leirin tiedot -->
-    <div class="section-box visible">
+    <div class="section-box">
       <h2>Leirin tiedot</h2>
       <p><strong>Järjestäjinä:</strong> Nurmijärven musiikkiopisto ja seurakunta</p>
       <p><strong>Ikä:</strong> noin 7–15-vuotiaille</p>
@@ -233,32 +232,24 @@
   </div>
 
   <script>
-    // Lisää luokka 'visible' ensimmäiselle osalle ja siirrä muiden näkyvyys vierityksen mukaan.
-    const sections = document.querySelectorAll('.section-box');
+    let lastScrollTop = 0;
+    const stickyText = document.getElementById("stickyText");
 
-    const isElementInViewport = (el) => {
-      const rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    };
+    window.addEventListener("scroll", function() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > lastScrollTop) {
+        // Skrollataan alas, piilotetaan teksti
+        stickyText.classList.add("hide");
+      } else {
+        // Skrollataan ylös, näytetään teksti
+        stickyText.classList.remove("hide");
+      }
 
-    const handleScroll = () => {
-      sections.forEach((section, index) => {
-        if (isElementInViewport(section)) {
-          section.classList.add('visible');
-        } else {
-          section.classList.remove('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('load', handleScroll); // Lisää ensimmäinen osio heti näkyviin
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
+    });
   </script>
 
 </body>
 </html>
+
