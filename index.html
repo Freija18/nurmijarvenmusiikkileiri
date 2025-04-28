@@ -236,6 +236,8 @@
     let lastScrollTop = 0;
     const stickyText = document.getElementById("stickyText");
     const section1 = document.getElementById("section1");
+    const section2 = document.getElementById("section2");
+    const section3 = document.getElementById("section3");
 
     window.addEventListener("scroll", function() {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -247,11 +249,23 @@
         stickyText.classList.remove("hide");
       }
 
-      // Piilotetaan ja näytetään osiot skrollauksen mukaan
-      if (window.scrollY > section1.offsetTop) {
-        section1.style.opacity = 1; // Näytetään osio, kun skrollataan alaspäin
+      // Piilotetaan ja näytetään osiot skrollauksen mukaan (muut osiot)
+      if (window.scrollY > section1.offsetTop - 100) { // Näkyviin aikaisemmin
+        section1.style.opacity = 1;
       } else {
-        section1.style.opacity = 0; // Piilotetaan osio, kun skrollataan ylöspäin
+        section1.style.opacity = 0;
+      }
+
+      if (window.scrollY > section2.offsetTop - 100) { // Näkyviin aikaisemmin
+        section2.style.opacity = 1;
+      } else {
+        section2.style.opacity = 0;
+      }
+
+      if (window.scrollY > section3.offsetTop - 100) { // Näkyviin aikaisemmin
+        section3.style.opacity = 1;
+      } else {
+        section3.style.opacity = 0;
       }
 
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
@@ -260,6 +274,7 @@
 
 </body>
 </html>
+
 
 
 
